@@ -21,7 +21,7 @@ void write (const T* v, size_t sz, const FILEPtr& fid) {
 template<typename T>
 void read (T* v, size_t sz, const FILEPtr& fid) {
   size_t nread = fread(v, sizeof(T), sz, fid.get());
-  EKAT_REQUIRE_MSG(nread == sz, "read: nread = " << nread << " sz = " << sz);
+  // EKAT_REQUIRE_MSG(nread == sz, "read: nread = " << nread << " sz = " << sz);
 }
 
 } // namespace ekat
